@@ -34,25 +34,55 @@ const TAGS = {
     name: ".NET",
     class: "bg-[#003159] text-white",
     icon: Net,
+  
+  },
+  
+  Tailwind: {
+    name: "Tailwind css",
+        class: "bg-[#003159] text-white",
+            icon: Tailwind,
+
+
+
   }
+
 };
 const PROJECTS = [
+
+ {
+    title: "Docsant Link",
+    description:
+      "Acortador de URLs rápido, simple y ligero que te permite generar enlaces cortos y personalizados para compartir fácilmente.",
+    link: "https://docsant.link",
+    github: "https://github.com/Doc1325/DocsantLink",
+    image: "/projects/docsantlinks.webp",
+    tags: [TAGS.NET],
+  },
+ {
+    title: "Verdad o Shot",
+    description:
+      "Juego web y mobile desarrollado con React.js y React Native enfocado en arquitectura escalable, design system y experiencia de usuario.",
+    link: "https://verdadoshot.com",
+    github: "https://github.com/Doc1325/Docsant-Movies",
+    image: "/projects/verdadoshot.webp",
+    tags: [TAGS.NEXT, TAGS.Tailwind],
+  },
   {
     title: "Docsant Movies",
     description:
       "Web para fanaticos del cine y series de television, que permite consultar las ultimas tendencias del septimo arte. Creado desde cero con React.js y React Router",
     link: "https://docsantmovies.netlify.app/",
     github: "https://github.com/Doc1325/Docsant-Movies",
-    image: "/projects/docsantmovies.PNG",
+    image: "/projects/docsantmovies.webp",
     tags: [TAGS.NEXT],
   },
   {
     title: "Task Manager Api - Gestiona tareas y usuarios de manera eficiente",
     description:
-      "Una API para la gestión colaborativa de tareas. Permite a los usuarios crear, actualizar, eliminar y consultar tareas según su rol (Administrador o Usuario regular). Creado con asp.netcore",
+      "Una API para la gestión colaborativa de tareas. Permite a los usuarios crear, actualizar, eliminar y consultar tareas según su rol. Creado con asp.netcore",
     link: "http://docsanttaskmanager.somee.com/swagger/index.html",
-    github: "https://github.com/Doc1325/Practicas-de-maquetacion-web",
-    image: "/projects/taskmanager.PNG",
+    github: "https://github.com/Doc1325/TaskManager-Api",
+    image: "/projects/taskmanager.webp",
     tags: [TAGS.NET],
   },
   {
@@ -61,18 +91,9 @@ const PROJECTS = [
       "Quiz de pokemon hecho con HTML, CSS , JavaScript y la Poke Api",
     link: "https://pokeadivinanza.netlify.app/",
     github: "https://github.com/Doc1325/Guessthepokemon",
-    image: "/projects/pokeguess.png",
+    image: "/projects/pokeguess.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
   },
-  {
-    title: "Muscle Major Gym",
-    description:
-      "Una landing page elegante y minimalista, pensada para potenciar negocios fitness. Creado con HTML, CSS Y Vanilla JavaScript",
-    link: "http://musclemajorgym.netlify.app",
-    github: "https://github.com/Doc1325/Practicas-de-maquetacion-web",
-    image: "/projects/musclemajor.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
-  }
 ];
 ---
 
@@ -83,7 +104,7 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt=""
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
