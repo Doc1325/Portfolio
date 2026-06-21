@@ -8,6 +8,7 @@ import HtLogo from "./icons/HtLogo.astro";
 import CSLogo from "./icons/CSLogo.astro";
 import JSLogo from "./icons/JSLogo.astro";
 import Net from "./icons/Net.astro";
+import Supabase from "./icons/Supabase.astro";  
 
 const TAGS = {
   NEXT: {
@@ -35,7 +36,11 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Net,
   },
-
+  Supabase: {
+    name: "Supabase",
+    class: "bg-[#003159] text-white",
+    icon: Supabase,
+  },
   Tailwind: {
     name: "Tailwind css",
     class: "bg-[#003159] text-white",
@@ -44,9 +49,20 @@ const TAGS = {
 };
 const PROJECTS = [
   {
+    title: "Learn Path AI",
+    description:
+      "Aplicacion web que genera planes de estudio utilizando inteligencia artificial. Desarrollada con React.js, Supabase y Tailwind CSS",
+    link: "https://learnpathgenerator.netlify.app/",
+    github: "https://github.com/Doc1325/Learn-Path",
+
+    image: "/projects/learnpath.png ",
+    tags: [TAGS.NEXT,  TAGS.Supabase, TAGS.Tailwind],
+  },
+
+  {
     title: "C fit",
     description:
-      "Aplicacion web para la creacion de rutinas de entrenamiento personalizadas con ayuda de inteligencia artificial. Desarrollada con React.js",
+      "Aplicacion web para la creacion de rutinas de entrenamiento personalizadas. Desarrollada con React.js",
     link: "https://cfit.netlify.app/",
     image: "/projects/cfit.png ",
     tags: [TAGS.NEXT],
@@ -105,7 +121,7 @@ const PROJECTS = [
             <img
               alt=""
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
+              
               src={image}
             />
           </div>
