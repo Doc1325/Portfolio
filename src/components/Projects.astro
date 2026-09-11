@@ -1,6 +1,6 @@
 ---
 import GitHub from "./icons/GitHub.astro";
-import NextJS from "./icons/NextJS.astro";
+import ReactIcon from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
@@ -8,13 +8,13 @@ import HtLogo from "./icons/HtLogo.astro";
 import CSLogo from "./icons/CSLogo.astro";
 import JSLogo from "./icons/JSLogo.astro";
 import Net from "./icons/Net.astro";
-import Supabase from "./icons/Supabase.astro";  
+import Supabase from "./icons/Supabase.astro";
 
 const TAGS = {
-  NEXT: {
-    name: "React.js",
+  REACT: {
+    name: "React",
     class: "bg-[#003159] text-white",
-    icon: NextJS,
+    icon: ReactIcon,
   },
   HTML: {
     name: "HTML",
@@ -32,7 +32,7 @@ const TAGS = {
     icon: JSLogo,
   },
   NET: {
-    name: ".NET",
+    name: "ASP.NET Core",
     class: "bg-[#003159] text-white",
     icon: Net,
   },
@@ -42,69 +42,87 @@ const TAGS = {
     icon: Supabase,
   },
   Tailwind: {
-    name: "Tailwind css",
+    name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
 };
-const PROJECTS = [
+
+const FEATURED_PROJECTS = [
   {
     title: "Learn Path AI",
     description:
-      "Aplicacion web que genera planes de estudio utilizando inteligencia artificial. Desarrollada con React.js, Supabase y Tailwind CSS",
+      "Genera planes de estudio personalizados con inteligencia artificial y haz seguimiento de tu progreso.",
+    highlights: [
+      "Autenticación y persistencia de planes con Supabase",
+      "Interfaz responsive con React + Tailwind CSS",
+    ],
     github: "https://github.com/Doc1325/Learn-Path",
-
-    image: "/projects/learnpath.webp ",
-    tags: [TAGS.NEXT,  TAGS.Supabase, TAGS.Tailwind],
+    image: "/projects/learnpath.webp",
+    tags: [TAGS.REACT, TAGS.Supabase, TAGS.Tailwind],
   },
-
-    {
+  {
     title: "Verdad o Shot",
     description:
-      "Juego multiplataforma desarrollado con React.js y React native. Cuenta con más mil descargas en Google Play y miles de visitas semanales en su versión web",
+      "Juego de fiesta multiplataforma con más de 1.000 descargas en Google Play y miles de visitas semanales en su versión web.",
+    highlights: [
+      "Un mismo codebase con React para web y React Native para móvil",
+      "Diseñado para sesiones en grupo: partidas rápidas sin registro",
+    ],
     link: "https://verdadoshot.com",
-    image: "/projects/verdadoshot.webp ",
-    tags: [TAGS.NEXT, TAGS.Tailwind],
-  },
-
-  {
-    title: "C fit",
-    description:
-      "Aplicacion web para la creacion de rutinas de entrenamiento personalizadas. Desarrollada con React.js",
-    link: "https://cfit.netlify.app/",
-    image: "/projects/cfit.webp ",
-    tags: [TAGS.NEXT],
-  },
-
-  {
-    title: "Docsant Movies",
-    description:
-      "Web para fanaticos del cine y series de televisión, que permite consultar las ultimas tendencias del septimo arte. Creado desde cero con React.js y React Router",
-    link: "https://docsantmovies.netlify.app/",
-    github: "https://github.com/Doc1325/Docsant-Movies",
-    image: "/projects/docsantmovies.webp",
-    tags: [TAGS.NEXT],
+    image: "/projects/verdadoshot.webp",
+    tags: [TAGS.REACT, TAGS.Tailwind],
   },
   {
-    title: "Task Manager Api - Gestiona tareas y usuarios de manera eficiente",
+    title: "TaskManager API",
     description:
-      "Una API para la gestión colaborativa de tareas. Permite a los usuarios crear, actualizar, eliminar y consultar tareas según su rol. Creado con asp.netcore",
+      "API REST para la gestión colaborativa de tareas con permisos por rol.",
+    highlights: [
+      "CRUD de tareas y usuarios con ASP.NET Core + Entity Framework",
+      "Autorización por roles y documentación de endpoints",
+    ],
     github: "https://github.com/Doc1325/TaskManager-Api",
     image: "/projects/taskmanager.webp",
     tags: [TAGS.NET],
   },
   {
+    title: "Docsant Movies",
+    description:
+      "Explora tendencias de cine y series: búsqueda, fichas y detalle por título.",
+    highlights: [
+      "Creada desde cero con React + React Router",
+      "Consumo de API externa con estados de carga y paginación",
+    ],
+    link: "https://docsantmovies.netlify.app/",
+    github: "https://github.com/Doc1325/Docsant-Movies",
+    image: "/projects/docsantmovies.webp",
+    tags: [TAGS.REACT],
+  },
+];
+
+const MINI_PROJECTS = [
+  {
+    title: "C-Fit",
+    description:
+      "Crea rutinas de entrenamiento personalizadas por nivel y objetivo.",
+    highlights: ["SPA con React", "Enfocada en uso rápido desde el móvil"],
+    link: "https://cfit.netlify.app/",
+    image: "/projects/cfit.webp",
+    tags: [TAGS.REACT],
+  },
+  {
     title: "Docsant Link",
     description:
-      "Acortador de URLs rápido, simple y ligero que te permite generar enlaces cortos y personalizados para compartir fácilmente.",
+      "Acortador de URLs ligero para generar enlaces cortos y compartirlos fácilmente.",
+    highlights: ["Backend con ASP.NET Core", "Enlaces personalizados"],
     github: "https://github.com/Doc1325/DocsantLink",
-    image: "/projects/docsantlinks.webp ",
+    image: "/projects/docsantlinks.webp",
     tags: [TAGS.NET],
   },
   {
-    title: "Guess the pokemon",
-    description:
-      "Quiz de pokemon hecho con HTML, CSS , JavaScript y la Poke Api",
+    title: "Guess the Pokémon",
+    description: "Quiz para adivinar Pokémon consumiendo la PokéAPI.",
+    highlights: ["JavaScript vanilla + HTML/CSS", "Puntuación y rondas"],
     link: "https://pokeadivinanza.netlify.app/",
     github: "https://github.com/Doc1325/Guessthepokemon",
     image: "/projects/pokeguess.webp",
@@ -115,17 +133,24 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    FEATURED_PROJECTS.map(({ image, title, description, highlights, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <a
+            href={github ?? link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${title} — ${github ? "ver código en GitHub" : "ver demo"}`}
+            class="block relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+          >
             <img
-              alt=""
+              alt={`${title} — captura de la aplicación`}
+              loading="lazy"
+              decoding="async"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              
               src={image}
             />
-          </div>
+          </a>
         </div>
 
         <div class="w-full md:w-1/2 md:max-w-lg">
@@ -133,7 +158,7 @@ const PROJECTS = [
             {title}
           </h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-row flex-wrap mb-2 gap-x-2 gap-y-2">
               {tags.map((tag) => (
                 <li>
                   <span
@@ -146,9 +171,14 @@ const PROJECTS = [
               ))}
             </ul>
 
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
+            <p class="mt-2 text-gray-700 dark:text-gray-300 font-medium text-pretty">
               {description}
-            </div>
+            </p>
+            <ul class="mt-3 space-y-1 text-sm text-gray-600 dark:text-gray-400 list-disc list-inside">
+              {highlights.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
               {github && (
                 <LinkButton href={github}>
@@ -168,4 +198,69 @@ const PROJECTS = [
       </article>
     ))
   }
+</div>
+
+<div class="mt-20">
+  <h3 class="mb-2 text-xl font-semibold text-gray-800 dark:text-gray-100">
+    Otros proyectos
+  </h3>
+  <p class="mb-8 text-sm text-gray-600 dark:text-gray-400">
+    Mini-proyectos para practicar fundamentos y probar ideas rápido.
+  </p>
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      MINI_PROJECTS.map(({ image, title, description, highlights, tags, link, github }) => (
+        <article class="group flex flex-col overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/40 shadow-sm hover:shadow-xl transition duration-300 md:hover:-translate-y-1">
+          <a
+            href={github ?? link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${title} — ${github ? "ver código en GitHub" : "ver demo"}`}
+            class="block overflow-hidden"
+          >
+            <img
+              alt={`${title} — captura de la aplicación`}
+              loading="lazy"
+              decoding="async"
+              class="object-cover object-top w-full h-40 transition duration-500 md:group-hover:scale-105"
+              src={image}
+            />
+          </a>
+          <div class="flex flex-col flex-1 p-5">
+            <h4 class="text-lg font-bold text-gray-800 dark:text-gray-100">{title}</h4>
+            <ul class="flex flex-row flex-wrap mt-3 gap-x-2 gap-y-2">
+              {tags.map((tag) => (
+                <li>
+                  <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p class="mt-3 text-sm text-gray-700 dark:text-gray-300 text-pretty">{description}</p>
+            <ul class="mt-2 space-y-1 text-[13px] text-gray-600 dark:text-gray-400 list-disc list-inside">
+              {highlights.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <footer class="flex items-center justify-start mt-4 gap-x-3">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-5" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </article>
+      ))
+    }
+  </div>
 </div>

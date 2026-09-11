@@ -1,46 +1,53 @@
 ---
-const personalImageAlt = "Miguel Ángel"
+const personalImageAlt = "Dominic Santiago Ramos"
 import Badge from "@/components/Badge.astro"
+import GitHubIcon from "@/components/icons/GitHub.astro"
 import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import MailIcon from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
+<div class="max-w-2xl">
+  <div class="flex items-center gap-4 mb-6">
     <img
-      class="rounded-full shadow-lg size-24"
+      width="96"
+      height="96"
+      class="rounded-full shadow-lg size-16 md:size-20 object-cover"
       src="/dominic.jpg"
       alt={personalImageAlt}
     />
-    <a
-      href="https://linkedin.com/in/midudev"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
-    >
-    </a>
+    <Badge>Disponible para trabajar</Badge>
   </div>
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-  Dominic Santiago Ramos
+    Dominic Santiago Ramos
   </h1>
   <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 text-balance"
   >
-     <strong
-      >Ingeniero en Sistemas Computacionales.</strong
-    > Especializado en desarrollo de software.
+    <strong>Ingeniero en Sistemas Computacionales.</strong>
+    Construyo aplicaciones web rápidas que la gente realmente usa.
   </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:dominicsant3@gmail.com">
-      <MailIcon class="size-4" />
-      Contáctame
+  <p class="mt-4 text-base text-gray-600 dark:text-gray-400 text-pretty">
+    Mi juego <strong class="text-gray-800 dark:text-gray-200 font-semibold">Verdad o Shot</strong> supera las
+    <strong class="text-gray-800 dark:text-gray-200 font-semibold">1.000 descargas en Google Play</strong>
+    y miles de visitas semanales en web. Especializado en
+    <strong class="text-gray-800 dark:text-gray-200 font-semibold">React + Tailwind</strong> en frontend y
+    <strong class="text-gray-800 dark:text-gray-200 font-semibold">ASP.NET Core + Supabase</strong> en backend.
+  </p>
+  <nav class="flex flex-wrap gap-3 mt-8">
+    <SocialPill href="https://github.com/Doc1325">
+      <GitHubIcon class="size-4" />
+      GitHub
     </SocialPill>
     <SocialPill href="https://linkedin.com/in/dominic-santiago-ramos-313840261">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill href="mailto:dominicsant3@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
     </SocialPill>
   </nav>
 </div>
